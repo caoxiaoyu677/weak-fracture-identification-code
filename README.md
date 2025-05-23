@@ -1,5 +1,4 @@
 # weak-fracture-identification-code
-Code for our paper on fracture detection in CT core samples.
 ## <li>A Novel Approach for Recognizing Weak Fractures in Hydraulic Fracturing of Rock Core</li>
 
 ## INTRODUCTION
