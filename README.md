@@ -7,5 +7,25 @@ Code for our paper on fracture detection in CT core samples.
 
 ### <li> FLOWCHART OF FRACTURE DETECTION AND CLASSIFICATION : </li>
 <img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png>
+<li>The workflow of the proposed approach initiates with importing raw CT slice datasets (Figure 1a). Weak fractures typically exhibit CT response values closely resembling those of the surrounding rock matrix, complicating their accurate differentiation and reliable identification. To enhance fracture visibility, an adaptive histogram equalization technique combined with a sharpening convolution kernel is applied to the raw CT slices, generating fracture-enhanced data (Figure 1b). Although this step substantially improves fracture contrast, it concurrently amplifies noise of varying intensities and spatial distributions, adversely affecting subsequent analyses. To mitigate this issue, a hybrid noise-reduction strategy utilizing a combination of bilateral and Gabor filtering is employed, effectively preserving fracture details while reducing unwanted noise, thus producing clean and structurally detailed datasets (Figure 1c).
+Subsequently, the ant-tracking algorithm is implemented, leveraging its heuristic searching capability to effectively identify continuous fracture pathways (Figure 1d). To enhance the precision of fracture representation, identified fracture paths undergo further refinement, yielding detailed fracture skeletons (Figure 1e). Finally, fractures are systematically classified into strong and weak categories based on their distinct CT response characteristics, resulting in accurate and comprehensive fracture identification datasets (Figure 1f).</li>
 
 ### ------------------------------------ METHODOLOGY ---------------------------------------- 
+<ul><li><strong> FRCTURE EEHANCEMENT</strong></li></ul>
+<li>
+  Common data enhancement methods include histogram-based approaches, filtering techniques, and second-order Laplacian operators. Among these, Adaptive Histogram Equalization (AHE) improves the dynamic range of CT response values by transforming the original data histogram into a uniform distribution, effectively enhancing image contrast (Jam et al., 2021). However, due to the subtle differences between weak fractures and the surrounding matrix in CT response values, traditional AHE often induces a "mosaic effect", characterized by block-like artifacts arising from localized over-enhancement. Contrast Limited Adaptive Histogram Equalization (CLAHE) mitigates this issue by restricting the extent of local contrast amplification, thereby reducing mosaic artifacts. Nonetheless, CLAHE still exhibits limited capability to enhance weak edges and subtle details within low-contrast regions.
+To address these limitations, the present study proposes a novel adaptive histogram equalization method combined with a sharpening convolution kernel. The implementation procedure is as follows:
+  
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
