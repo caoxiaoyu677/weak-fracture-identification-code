@@ -12,12 +12,14 @@ Subsequently, the ant-tracking algorithm is implemented, leveraging its heuristi
 
 ### ------------------------------------ METHODOLOGY ---------------------------------------- 
 <ul><li><strong> FRCTURE EEHANCEMENT</strong></li></ul>
+<ul><ul>
 <li>
   Common data enhancement methods include histogram-based approaches, filtering techniques, and second-order Laplacian operators. Among these, Adaptive Histogram Equalization (AHE) improves the dynamic range of CT response values by transforming the original data histogram into a uniform distribution, effectively enhancing image contrast (Jam et al., 2021). However, due to the subtle differences between weak fractures and the surrounding matrix in CT response values, traditional AHE often induces a "mosaic effect", characterized by block-like artifacts arising from localized over-enhancement. Contrast Limited Adaptive Histogram Equalization (CLAHE) mitigates this issue by restricting the extent of local contrast amplification, thereby reducing mosaic artifacts. Nonetheless, CLAHE still exhibits limited capability to enhance weak edges and subtle details within low-contrast regions.
-To address these limitations, the present study proposes a novel adaptive histogram equalization method combined with a sharpening convolution kernel. The implementation procedure is as follows:
-  
-</li>
-
+To address these limitations, the present study proposes a novel adaptive histogram equalization method combined with a sharpening convolution kernel. The implementation procedure is as follows:</li>
+<li>
+  To validate the effectiveness of the proposed enhancement method, three representative CT slices (Figure 2) were selected for comparative analysis. Slice I features one strong fracture and multiple complex weak fractures (Figure 2 Ia), Slice II has one strong fracture and three weak fractures (Figure 2 IIa), and Slice III comprises one strong fracture and two weak fractures (Figure 2 IIIa). The enhancement results (Figure 2 Ib, IIb, and IIIb) demonstrate substantial improvement in contrast between fractures and the surrounding matrix, significantly mitigating the blur and potential loss of weak fracture details commonly associated with noise amplification during traditional enhancement processes. Nevertheless, some noise amplification remains inevitable, manifesting with non-uniform intensity and spatial distributions, potentially affecting subsequent processing steps.
+  <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+</ul></ul>
 
 
 
