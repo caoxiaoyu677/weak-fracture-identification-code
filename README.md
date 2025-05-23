@@ -42,7 +42,7 @@ In the ant colony algorithm, the optimal path selection is abstracted as a globa
 
 ### ------------------------------------ DEMO ---------------------------------------- 
 ### Examples : 
- <img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F5.jpg>
+<img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F5.jpg>
 <img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F6.jpg>
  
 <img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F7.png>
