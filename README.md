@@ -20,7 +20,8 @@ To address these limitations, the present study proposes a novel adaptive histog
   To validate the effectiveness of the proposed enhancement method, three representative CT slices (Figure 2) were selected for comparative analysis. Slice I features one strong fracture and multiple complex weak fractures (Figure 2 Ia), Slice II has one strong fracture and three weak fractures (Figure 2 IIa), and Slice III comprises one strong fracture and two weak fractures (Figure 2 IIIa). The enhancement results (Figure 2 Ib, IIb, and IIIb) demonstrate substantial improvement in contrast between fractures and the surrounding matrix, significantly mitigating the blur and potential loss of weak fracture details commonly associated with noise amplification during traditional enhancement processes. Nevertheless, some noise amplification remains inevitable, manifesting with non-uniform intensity and spatial distributions, potentially affecting subsequent processing steps.
   <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
 </ul></ul>
-
+<ul><li><strong> FILTERING PROCESS</strong></li></ul>
+<li>To mitigate the amplified noise introduced during fracture enhancement, a hybrid filtering strategy integrating bilateral filtering and Gabor filtering is implemented. Initially, bilateral filtering is employed for global noise suppression by constructing a dual-weight function that simultaneously considers spatial proximity and grayscale similarity, effectively smoothing noise while preserving fracture edge integrity. Subsequently, Gabor filtering is utilized to eliminate residual fine-scale noise and enhance local fracture structural and textural characteristics.</li>
 
 
 
