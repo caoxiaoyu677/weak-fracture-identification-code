@@ -21,10 +21,34 @@ To address these limitations, the present study proposes a novel adaptive histog
   <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
 </ul></ul>
 <ul><li><strong> FILTERING PROCESS</strong></li></ul>
-<li>To mitigate the amplified noise introduced during fracture enhancement, a hybrid filtering strategy integrating bilateral filtering and Gabor filtering is implemented. Initially, bilateral filtering is employed for global noise suppression by constructing a dual-weight function that simultaneously considers spatial proximity and grayscale similarity, effectively smoothing noise while preserving fracture edge integrity. Subsequently, Gabor filtering is utilized to eliminate residual fine-scale noise and enhance local fracture structural and textural characteristics.</li>
-
-
-
+<ul><ul>
+<li>To mitigate the amplified noise introduced during fracture enhancement, a hybrid filtering strategy integrating bilateral filtering and Gabor filtering is implemented. Initially, bilateral filtering is employed for global noise suppression by constructing a dual-weight function that simultaneously considers spatial proximity and grayscale similarity, effectively smoothing noise while preserving fracture edge integrity. Subsequently, Gabor filtering is utilized to eliminate residual fine-scale noise and enhance local fracture structural and textural characteristics.</li></ul></ul>
+<ul><li>Ant Tracking Algorithm ANT TRACKING ALGORITHM</li></ul>
+<ul><ul>
+<li>The ant tracking algorithm is a novel optimization method inspired by the collective foraging behavior of ants, where individuals release pheromones along traveled paths and preferentially move toward regions with higher pheromone intensity (Wu et al., 2014). Due to its robustness and adaptability, the algorithm has been widely applied in fields such as fault detection, image tracking, and path planning (Xie et al., 2022; S. Choi et al., 2024; Xia et al., 2024). When applied to core CT data analysis, the algorithm simulates ants' adaptive path-finding behaviors, enabling reliable identification of continuous fracture pathways, even under weak signal conditions.
+In the ant colony algorithm, the optimal path selection is abstracted as a global path-planning problem comprising two fundamental processes: path construction and pheromone updating (Li et al., 2023). </li>
+<li>
+  When applied to fracture identification from core CT data, fractures typically manifest as regions with significant gradients in CT response values. Thus, virtual ants preferentially navigate toward areas exhibiting higher intensity gradients. During the iterative process, multiple ants traverse the CT scan dataset guided by local pheromone concentrations, continuously depositing pheromones along probable fracture pathways. Consequently, fracture regions experience pheromone accumulation, reinforcing path visibility. Conversely, non-fracture regions experience pheromone evaporation, ensuring clear differentiation of fracture structures from the surrounding rock matrix.
+</li>
+</ul></ul>
+<ul><li>Differentiation of Strong and Weak Fractures</li></ul>
+<ul><ul>
+<li>
+    The CT datasets obtained from hydraulically fractured cores can be represented as a sequence of two-dimensional CT slices (Figure 3a), each potentially containing multiple fractures characterized by varying rupture intensities. Typically, strong fractures possess larger apertures, yielding lower CT response values, and appear as prominent dark or black streaks. Conversely, weak fractures exhibit narrower apertures, higher CT values, and appear as thin, grey to light-grey streaks with indistinct edges (Figure 3b). Given the notable differences in CT response distributions between strong and weak fractures, a K-means clustering approach is utilized to effectively classify these fracture types.
+    <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+<li>
+    Initially, the original CT dataset is loaded (Figure 4a). Subsequently, the fracture skeleton is extracted following the proposed fracture identification workflow (Figure 4b). The CT response values corresponding to the two-dimensional coordinates of the identified fracture skeletons are then retrieved. These values are clustered into two distinct groups using the K-means clustering algorithm, and the mean CT response values for each cluster are calculated. Given that strong fractures generally present lower average CT response values due to their larger apertures, the cluster with the lower mean CT response is designated as representing strong fractures, whereas the cluster with the higher mean CT response corresponds to weak fractures. Consequently, strong fractures are visualized and marked in red according to their coordinates, clearly distinguishing them from weak fractures (Figure 4c). This clustering-based differentiation strategy enables accurate classification and detailed quantitative analysis of strong and weak fracture populations within hydraulically fractured cores, facilitating subsequent comprehensive fracture characterization and modeling.
+    <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+</ul></ul>
+### ------------------------------------ DEMO ---------------------------------------- 
+###EXAMPLE:
+ <img src=https://user-images.githubusercontent.com/75990647/192364958-662bf141-95f8-4836-ad9e-dacbd4d97338.jpg
+ width="400px"/>
+<img src=https://user-images.githubusercontent.com/75990647/192365094-9080ea94-d34d-469c-bd29-df20d82ee657.jpg
+ width="400px"/>
+ 
+<img src=https://user-images.githubusercontent.com/75990647/192308302-3f836f7b-4d7b-4419-b5c0-8de27f1e4dc0.jpg width="400px"/>
+<img src=https://user-images.githubusercontent.com/75990647/192308594-ffe78b53-8b29-4003-bcf6-b6dc4fb71512.jpg width="400px"/>
 
 
 
