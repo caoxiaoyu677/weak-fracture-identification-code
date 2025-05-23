@@ -10,7 +10,7 @@
 Subsequently, the ant-tracking algorithm is implemented, leveraging its heuristic searching capability to effectively identify continuous fracture pathways (Figure 1d). To enhance the precision of fracture representation, identified fracture paths undergo further refinement, yielding detailed fracture skeletons (Figure 1e). Finally, fractures are systematically classified into strong and weak categories based on their distinct CT response characteristics, resulting in accurate and comprehensive fracture identification datasets (Figure 1f).</li>
 
 ### ------------------------------------ METHODOLOGY ---------------------------------------- 
-<ul><li><strong> FRCTURE EEHANCEMENT</strong></li></ul>
+<ul><li><strong> FRCTURE ENHANCEMENT</strong></li></ul>
 <ul><ul>
 <li>
   Common data enhancement methods include histogram-based approaches, filtering techniques, and second-order Laplacian operators. Among these, Adaptive Histogram Equalization (AHE) improves the dynamic range of CT response values by transforming the original data histogram into a uniform distribution, effectively enhancing image contrast (Jam et al., 2021). However, due to the subtle differences between weak fractures and the surrounding matrix in CT response values, traditional AHE often induces a "mosaic effect", characterized by block-like artifacts arising from localized over-enhancement. Contrast Limited Adaptive Histogram Equalization (CLAHE) mitigates this issue by restricting the extent of local contrast amplification, thereby reducing mosaic artifacts. Nonetheless, CLAHE still exhibits limited capability to enhance weak edges and subtle details within low-contrast regions.
