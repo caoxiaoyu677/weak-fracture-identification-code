@@ -18,7 +18,7 @@ Subsequently, the ant-tracking algorithm is implemented, leveraging its heuristi
 To address these limitations, the present study proposes a novel adaptive histogram equalization method combined with a sharpening convolution kernel. The implementation procedure is as follows:</li>
 <li>
   To validate the effectiveness of the proposed enhancement method, three representative CT slices (Figure 2) were selected for comparative analysis. Slice I features one strong fracture and multiple complex weak fractures (Figure 2 Ia), Slice II has one strong fracture and three weak fractures (Figure 2 IIa), and Slice III comprises one strong fracture and two weak fractures (Figure 2 IIIa). The enhancement results (Figure 2 Ib, IIb, and IIIb) demonstrate substantial improvement in contrast between fractures and the surrounding matrix, significantly mitigating the blur and potential loss of weak fracture details commonly associated with noise amplification during traditional enhancement processes. Nevertheless, some noise amplification remains inevitable, manifesting with non-uniform intensity and spatial distributions, potentially affecting subsequent processing steps.
-  <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+  <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F2.png></ul></li>
 </ul></ul>
 <ul><li><strong> FILTERING PROCESS</strong></li></ul>
 <ul><ul>
@@ -35,21 +35,18 @@ In the ant colony algorithm, the optimal path selection is abstracted as a globa
 <ul><ul>
 <li>
     The CT datasets obtained from hydraulically fractured cores can be represented as a sequence of two-dimensional CT slices (Figure 3a), each potentially containing multiple fractures characterized by varying rupture intensities. Typically, strong fractures possess larger apertures, yielding lower CT response values, and appear as prominent dark or black streaks. Conversely, weak fractures exhibit narrower apertures, higher CT values, and appear as thin, grey to light-grey streaks with indistinct edges (Figure 3b). Given the notable differences in CT response distributions between strong and weak fractures, a K-means clustering approach is utilized to effectively classify these fracture types.
-    <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+    <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F3.png></ul></li>
 <li>
     Initially, the original CT dataset is loaded (Figure 4a). Subsequently, the fracture skeleton is extracted following the proposed fracture identification workflow (Figure 4b). The CT response values corresponding to the two-dimensional coordinates of the identified fracture skeletons are then retrieved. These values are clustered into two distinct groups using the K-means clustering algorithm, and the mean CT response values for each cluster are calculated. Given that strong fractures generally present lower average CT response values due to their larger apertures, the cluster with the lower mean CT response is designated as representing strong fractures, whereas the cluster with the higher mean CT response corresponds to weak fractures. Consequently, strong fractures are visualized and marked in red according to their coordinates, clearly distinguishing them from weak fractures (Figure 4c). This clustering-based differentiation strategy enables accurate classification and detailed quantitative analysis of strong and weak fracture populations within hydraulically fractured cores, facilitating subsequent comprehensive fracture characterization and modeling.
-    <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
+    <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F4.png></ul></li>
 </ul></ul>
 
 ### ------------------------------------ DEMO ---------------------------------------- 
 ### Examples : 
- <img src=https://user-images.githubusercontent.com/75990647/192364958-662bf141-95f8-4836-ad9e-dacbd4d97338.jpg
- width="400px"/>
-<img src=https://user-images.githubusercontent.com/75990647/192365094-9080ea94-d34d-469c-bd29-df20d82ee657.jpg
- width="400px"/>
+ <img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F5.jpg>
+<img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F6.jpg>
  
-<img src=https://user-images.githubusercontent.com/75990647/192308302-3f836f7b-4d7b-4419-b5c0-8de27f1e4dc0.jpg width="400px"/>
-<img src=https://user-images.githubusercontent.com/75990647/192308594-ffe78b53-8b29-4003-bcf6-b6dc4fb71512.jpg width="400px"/>
+<img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F7.png>
 
 
 
