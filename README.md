@@ -41,7 +41,7 @@ In the ant colony algorithm, the optimal path selection is abstracted as a globa
     <ul><img align= center height=450px src=https://user-images.githubusercontent.com/75990647/192298994-d80bb374-568c-4906-a10b-75958a3f9c1f.png></ul></li>
 </ul></ul>
 
-### ------------------------------------ METHODOLOGY ---------------------------------------- 
+### ------------------------------------ DEMO ---------------------------------------- 
 ### Examples : 
  <img src=https://user-images.githubusercontent.com/75990647/192364958-662bf141-95f8-4836-ad9e-dacbd4d97338.jpg
  width="400px"/>
