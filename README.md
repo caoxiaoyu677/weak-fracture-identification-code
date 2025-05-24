@@ -37,10 +37,9 @@ In the ant colony algorithm, the optimal path selection is abstracted as a globa
 <li>
     Initially, the original CT dataset is loaded (Figure 4a). Subsequently, the fracture skeleton is extracted following the proposed fracture identification workflow (Figure 4b). The CT response values corresponding to the two-dimensional coordinates of the identified fracture skeletons are then retrieved. These values are clustered into two distinct groups using the K-means clustering algorithm, and the mean CT response values for each cluster are calculated. Given that strong fractures generally present lower average CT response values due to their larger apertures, the cluster with the lower mean CT response is designated as representing strong fractures, whereas the cluster with the higher mean CT response corresponds to weak fractures. Consequently, strong fractures are visualized and marked in red according to their coordinates, clearly distinguishing them from weak fractures (Figure 4c). This clustering-based differentiation strategy enables accurate classification and detailed quantitative analysis of strong and weak fracture populations within hydraulically fractured cores, facilitating subsequent comprehensive fracture characterization and modeling.
     <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F4.png></ul></li>
-</ul></ul>
 
 ### ------------------------------------ CODE STRUCTURE---------------------------------------- 
-<li></li>
+<ul><img align = ></ul>
 
 ### ------------------------------------ DEMO ---------------------------------------- 
 ### Examples : 
