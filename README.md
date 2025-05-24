@@ -37,10 +37,14 @@ In the ant colony algorithm, the optimal path selection is abstracted as a globa
 <li>
     Initially, the original CT dataset is loaded (Figure 4a). Subsequently, the fracture skeleton is extracted following the proposed fracture identification workflow (Figure 4b). The CT response values corresponding to the two-dimensional coordinates of the identified fracture skeletons are then retrieved. These values are clustered into two distinct groups using the K-means clustering algorithm, and the mean CT response values for each cluster are calculated. Given that strong fractures generally present lower average CT response values due to their larger apertures, the cluster with the lower mean CT response is designated as representing strong fractures, whereas the cluster with the higher mean CT response corresponds to weak fractures. Consequently, strong fractures are visualized and marked in red according to their coordinates, clearly distinguishing them from weak fractures (Figure 4c). This clustering-based differentiation strategy enables accurate classification and detailed quantitative analysis of strong and weak fracture populations within hydraulically fractured cores, facilitating subsequent comprehensive fracture characterization and modeling.
     <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F4.png></ul></li>
-
+</ul></ul>
 ### ------------------------------------ CODE STRUCTURE---------------------------------------- 
+<ul><ul>
+  <li>To achieve the goal of extracting cracks and constructing a 3D crack model, this study uses Python as the development language and leverages several open-source Python libraries to improve processing efficiency and visualization. For example, pydicom is used to read CT data, OpenCV and scikit-image are used for image processing and visualization, astropy is used for data modeling, and concurrent and multiprocessing are employed for parallel processing.
+The main code files in this study include: Preprocessing.py, AntColony.py, Connectedcomponent.py, and Fracturedistinction.py.
+The code structure is as follows:</li>
 <ul><img align= center height=450px src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/F8.png ></ul>
-
+</ul></ul>
 ### ------------------------------------ DEMO ---------------------------------------- 
 ### Examples : 
 <img src=https://github.com/caoxiaoyu677/weak-fracture-identification-code/blob/main/gitimage/F5.jpg>
